@@ -1,0 +1,198 @@
+
+*{
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(27, 49, 66); 
+  height: 100vh;
+  width: 100vw;
+  padding-top: 60px;
+  
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  align-items: center;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  justify-content: center;
+  justify-content: space-around;
+}
+.centerer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#nav img {
+  transform: scale(0.4,0.35);
+  padding: 0px;
+  margin: 0px;
+}
+
+#nav h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+h2{
+  color: whitesmoke;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.text{
+  color: rgb(184, 159, 87);
+  
+}
+
+p{
+  color: whitesmoke;
+}
+
+.descriptionText{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 200px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.title{
+  color: #ffde7d;
+  font-size: 60px;
+}
+
+#wholeWebsite{
+  background-image: url("https://www.newyorktour1.com/blog/wp-content/uploads/sites/2/2017/02/8082161-14703219063110316_origin.jpg");
+  background-size: cover;
+  margin-top:50px;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+
+
+
+#wholeWebsite .text
+{
+  background-color: black;
+  opacity: 0.75;
+
+}
+
+form {
+  border: solid 3px;
+  margin: 300px;
+  margin-top: 90px;
+  text-align: center;
+}
+
+#loginForm, #signUpForm {
+  margin: 20px;
+}
+
+#name {
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  color: white;
+}
+
+.blockChain{
+  background-image: url("https://9to5google.com/wp-content/uploads/sites/4/2018/03/blockchain.jpg?quality=82&strip=all&w=1600");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  color: #ffde7d;
+  font-size: 60px
+  
+}
+
+#stocks{
+  background-image: url("https://s.marketwatch.com/public/resources/images/MW-DU756_Stock_ZH_20150921172954.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.sto{
+  color: #ffde7d;
+  font-size: 60px;
+}
+.interest{
+  background-image: url("https://knowledge.wharton.upenn.edu/wp-content/uploads/2015/12/rate-hike.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+#int{
+  color: #2d4059;
+  font-size: 30px;
+}
+
+input[type=email], input[type=password], input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#signIn, #signUp {
+  background-color: gold;
+  color: rgb(27, 49, 66);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#signIn:hover, #googleSI:hover, #signUp:hover{
+  opacity: 0.8;
+}
+
+#googleSI {
+  background-color: white;
+  color: rgb(27, 49, 66);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+img[src="googleG.png"] {
+  transform: scale(2.4,2.4);
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 10px;
+  width: 10px;
+}
+
+.lbl {
+  float: left;
+}
+
+.lbl2 {
+  float: left;
+}

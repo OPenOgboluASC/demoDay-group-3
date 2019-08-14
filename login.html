@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src = "login.js" defer></script>
+    <link href="navagation.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>BitMine - Log In</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Bitcoin</a></li>
+            <li><a href="blockChain.html">Blockchain</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="interest.html">Interest Rate</a></li>
+            <li style="float:right">
+                <a href="login.html" class = "active">
+                    <img src = "proPic.png"></a>
+            </li>
+        </ul>
+    </nav>
+    
+    <form>
+        <div id = "loginForm">
+            <label for="email" class="lbl2">Email</label>
+            <input type = "email" placeholder="Email@example.com" id = "si_email" name="email" required>
+
+            <label for = "pswrd" class="lbl2">Password</label>
+            <input type = "password" placeholder = "Enter Password" id = "si_pass" name = "pswrd" required>
+
+            <button type="submit" id = "signIn">Sign In</button>
+        
+            <p id = "messageSI"></p>
+            <button id = "googleSI" onclick="redirect"><img src="googleG.png">Sign in With Google</button>
+
+            <p>Don't have an account?</p>
+            <p><a href="signUp.html">Create one here</a></p>
+        </div>
+    </form>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#config-web-app -->
+            <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-database.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCWbggNXVm8jIoeSbCAbn9mUpf9hf0fXQQ",
+            authDomain: "bitmine-12643.firebaseapp.com",
+            databaseURL: "https://bitmine-12643.firebaseio.com",
+            projectId: "bitmine-12643",
+            storageBucket: "",
+            messagingSenderId: "109285251196",
+            appId: "1:109285251196:web:4815f17418a39553"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BitMine - Sign Up</title>
+    <script src = "signUp.js" defer></script>
+    <link href = "navagation.css" rel="stylesheet">
+    <link href = "style.css" rel="stylesheet">
+</head>
+<body>
+    <!--Nav Bar-->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Bitcoin</a></li>
+            <li><a href="blockChain.html">Blockchain</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="interest.html">Interest Rate</a></li>
+            <li style="float:right">
+                <a href="login.html"><div class = "prof">
+                    <img src = "proPic.png">
+                </div></a>
+            </li>
+        </ul>
+    </nav>
+
+    <form> 
+        <div id = "signUpForm">
+            <label for="name">Name</label>
+            <div id = "name">
+                <input type="text" placeholder="First" id="first" name="name" required>
+                <input type="text" placeholder="Last" id="last" name="name" required>
+            </div>
+            <label for="email" class="lbl">Email</label>
+            <input type = "email" placeholder="Email@example.com" id = "su_email" name="email" required>
+
+            <label for="pass" class="lbl">Password</label>
+            <input type = "password" placeholder="Enter Password" id = "su_pass" name="pass" required>
+
+            <label for="cPass" class="lbl">Confirm Password</label>
+            <input type = "password" placeholder="Enter Password Again" id = "su_cPass" name="cPass" required>
+
+            <button type="submit" id = "signUp">Sign Up</button>
+            <button id = "googleSI" onclick="redirect"><img src="googleG.png">Sign Up With Google</button>
+            <p id = "messageSU"></p>
+        </div>
+    </form>
+</body>
+</html>
