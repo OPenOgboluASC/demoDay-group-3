@@ -55,46 +55,70 @@ h2{
 
 p{
   color: whitesmoke;
+  font-size: 25px;
 }
 
 .descriptionText{
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 200px;
+  font-size: 22px;
   padding-right: 20px;
   padding-left: 20px;
+  width: 600px;
+  border: 15px solid whitesmoke ;
+  padding: 50px;
+  margin: 20px;
 }
 
 .title{
   color: #ffde7d;
-  font-size: 60px;
+  font-size: 65px;
+  padding-left: 20px;
+}
+
+.title2{
+  color: #ffde7d;
+  font-size: 190px;
 }
 
 #wholeWebsite{
   background-image: url("https://www.newyorktour1.com/blog/wp-content/uploads/sites/2/2017/02/8082161-14703219063110316_origin.jpg");
   background-size: cover;
-  margin-top:50px;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   z-index: -1;
 }
+#bkcimage{
+  padding-top: 20px;
+  padding-left: 760px;
+  width:500px;
+  height: 500px;
+}
 
-
+img[src="assets/images/Capture.jpg"] {
+  height: 13px;
+  transform: scale(5,5);
+  margin: 20px;
+  margin-right: 25px;
+}
 
 
 #wholeWebsite .text
 {
   background-color: black;
   opacity: 0.75;
+  height: 100vh;
+  width: 100vh;
 
 }
 
 form {
   border: solid 3px;
-  margin: 300px;
-  margin-top: 90px;
-  text-align: center;
+  width: 50vw;
+  margin: 25vw;
+  margin-top: 0px;
+  box-align: middle;
 }
 
 #loginForm, #signUpForm {
@@ -110,8 +134,17 @@ label {
   color: white;
 }
 
+#bkc{
+  background-image: url("https://ceoworld.biz/wp-content/uploads/2017/11/Blockchain-Technology.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 .blockChain{
-  background-image: url("https://9to5google.com/wp-content/uploads/sites/4/2018/03/blockchain.jpg?quality=82&strip=all&w=1600");
+
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -130,10 +163,6 @@ label {
   height: 100vh;
   width: 100vw;
 }
-.sto{
-  color: #ffde7d;
-  font-size: 60px;
-}
 .interest{
   background-image: url("https://knowledge.wharton.upenn.edu/wp-content/uploads/2015/12/rate-hike.jpg");
   background-size: cover;
@@ -144,7 +173,7 @@ label {
 }
 
 #int{
-  color: #2d4059;
+  color: whitesmoke;
   font-size: 30px;
 }
 
@@ -171,7 +200,7 @@ input[type=email], input[type=password], input[type=text] {
   opacity: 0.8;
 }
 
-#googleSI {
+#googleSI, #googleSU {
   background-color: white;
   color: rgb(27, 49, 66);
   padding: 14px 20px;
@@ -181,7 +210,19 @@ input[type=email], input[type=password], input[type=text] {
   width: 100%;
 }
 
-img[src="googleG.png"] {
+.irl{
+  font-size: 35px;
+  color: gold;
+  padding-right: 20px;
+}
+
+.irl2{
+  font-size: 35px;
+  color: gold;
+  padding-left: 20px;
+}
+
+img[src="assets/images/googleG.png"] {
   transform: scale(2.4,2.4);
   margin-left: 20px;
   margin-right: 20px;
@@ -196,3 +237,28 @@ img[src="googleG.png"] {
 .lbl2 {
   float: left;
 }
+
+#towat{
+  font-size: 60px
+}
+
+#pdf{
+  color: #ffde7d;
+  font-size: 60px;
+
+}
+
+#messageSU, #messageSI {
+  color: white;
+  border: solid 4px;
+  background-color: rgb(255, 156, 139, 0.8);
+  border-color: red;
+  border-radius: 10px;
+  height: 30px;
+  margin: 300px;
+  margin-bottom: 10px;
+  margin-top: 90px;
+  text-align: center;
+}  
+
+  

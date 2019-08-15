@@ -7,29 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src = "main.js" defer></script>
-    <script src="./index.html"></script>
-    <link href = "style.css" rel = "stylesheet">
-    <link href="navagation.css" rel="stylesheet">
+    <script src = "assets/lib/js/main.js" defer></script>
+    <link href = "assets/lib/css/style.css" rel = "stylesheet">
+    <link href="assets/lib/css/navagation.css" rel="stylesheet">
 </head>
 <body>
     <!-- Nav Bar -->
     <nav>
         <ul>
-            <li><a href="index.html">Bitcoin</a></li>
+            <li><img src = "assets/images/Capture.jpg"></li>
+            <li><a href="index.html">Home/Bitcoin</a></li>
             <li><a href="blockChain.html" class = "active">Blockchain</a></li>
-            <li><a href="stocks.html">Stocks</a></li>
-            <li><a href="interest.html">Interest Rate</a></li>
+            <li><a href="stocks.html">Stocks/Bonds</a></li>
+            <li><a href="interest.html">Interest Rates & Loans</a></li>
             <li style="float:right">
                 <a href="login.html"><div class = "prof">
-                <img src = "proPic.png">
+                <img src = "assets/images/proPic.png">
                 </div></a>
             </li>
         </ul>
     </nav>
   
         <div class="blockChain"> 
-             <h1 class="title"> Blockchain </h1>
+             <h1 id="bkc" class="title"> Blockchain </h1>
+             <h1 class="title">What is Blockchain?</h1>
             <p class="descriptionText">
                     Blockchain, is a growing list of records, called blocks, that are linked using cryptography. 
                     Each block contains a cryptographic hash of the previous block, a timestamp, 
@@ -38,7 +39,22 @@
                     be altered retroactively, without the alteration of all subsequent blocks. 
                     This allows for Crptocurrency, like Bitcoin, to actual work
             </p>
-                  
-        </div>
+            
+    
+                <p class="descriptionText">
+                    Some resources for learning more about blockchain are listed here :
+                    <a href="https://www.ibm.com/blockchain">Ibm.com</a>
+                    and
+                    <a href="https://www.worldbank.org/en/topic/financialsector/brief/blockchain-dlt">worldbank.org</a>
+                    by clicking the links, you will be taken to informational resources that allow further exploration into the topic
+                    as this website serves as a tool for the general public we will not cover every aspect in great detail. 
+    
+                </p>
+    
+    
+            </div>
+
+        <img id="bkcimage" src="https://amorystarr.com/wp-content/uploads/iur.jpeg"; alt="Blockchain Image"; align="center right"; width="100px"; height="100px";>
+
 </body>
 </html>

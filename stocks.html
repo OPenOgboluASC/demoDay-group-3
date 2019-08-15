@@ -7,39 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BitMine - Stocks</title>
-    <script src = "main.js" defer></script>
-    <script src="./index.html"></script>
-    <link href = "style.css" rel = "stylesheet">
-    <link href="navagation.css" rel="stylesheet">
+    <script src="assets/lib/js/bitStock.js" defer></script>
+    <link href = "assets/lib/css/style.css" rel = "stylesheet">
+    <link href="assets/lib/css/navagation.css" rel="stylesheet">
 </head>
 <body>
     <!-- Nav Bar -->
     <nav>
         <ul>
-            <li><a href="index.html">Bitcoin</a></li>
+            <li><img src = "assets/images/Capture.jpg"></li>
+            <li><a href="index.html">Home/Bitcoin</a></li>
             <li><a href="blockChain.html">Blockchain</a></li>
-            <li><a href="stocks.html" class = "active">Stocks</a></li>
-            <li><a href="interest.html">Interest Rate</a></li>
+            <li><a href="stocks.html" class = "active">Stocks/Bonds</a></li>
+            <li><a href="interest.html">Interest Rates & Loans</a></li>
             <li style="float:right">
-                <a href="login.html"><div class = "prof">
-                    <img src = "proPic.png">
-                </div></a>
+                <a href="login.html">
+                    <div class = "prof">
+                    <img src = "assets/images/proPic.png">
+                    </div>
+                </a>
             </li>
         </ul>
     </nav>
 
         <div class="text" id="stocks">
-            <h1 class="sto">Stocks</h1>
-            <p class="descriptionText">
-                    Blockchain, is a growing list of records, called blocks, that are linked using cryptography. 
-                    Each block contains a cryptographic hash of the previous block, a timestamp, 
-                    and transaction data.
-            </p>
-            <p class="descriptionText">
-                    A blockchain is a decentralized, distributed and public digital ledger that is used to record 
-                    transactions across many computers so that any involved record cannot be altered retroactively, 
-                    without the alteration of all subsequent blocks.
-            </p>
+            <div class="text2">
+                <h1 class="title2">Stocks</h1>
+            </div>
+    
+
         </div>
+            <h2 class="title"> What are Stocks?</h2>
+            <p class="descriptionText">
+            Stocks are an investment that shows that you own a share/percent in the company that issued the 
+            stock. Stocks are how ordinary people invest in some of the most successful companies in the world. 
+            For companies, stocks are a way to raise money to fund growth, products and other initiatives.
+            </p>
+            <h2 class="title">What is the benefits of having Stocks?</h2>
+            <p class="descriptionText">
+                The main benefits of owning Stocks are Investment gain, 
+                Dividend income, and Ownership.
+
+                Investment gain:
+                Over time, the stock market tends to rise in value, though the prices of individual stocks rise
+                and fall daily. Investments in stable companies that can grow tend to make profits for 
+                investors. Likewise, investing in many different stocks will help build your wealth by 
+                leveraging growth in different sectors of the economy, resulting in a profit even if some of 
+                your individual stocks lose value.
+
+                Dividend income:
+                 While not all stocks offer dividends, those that do deliver annual payments to investors. 
+                These payments arrive even if the stock has lost value and represents income on top of any 
+                profits that come from eventually selling the stock.
+
+                Ownership:
+                Shareholders vote on corporate board members and certain business decisions. They also receive 
+                annual reports to learn more about the company. Owning stock in the company you work for can be
+                a way to express loyalty and tie your personal finances to the success of the business as a 
+                whole.
+            </p>
+            <h2 class="title">What are Bonds </h2>
+            <p class="descriptionText">
+                    A bond is a fixed income instrument that represents a loan made by an investor to a borrower
+                    (typically corporate or governmental). A bond could be thought of as an I.O.U.(a signed 
+                    document acknowledging a debt.) between the lender and borrower that includes the details of
+                    the loan and its payments. Bonds are used by companies, municipalities, states, and 
+                    sovereign governments to finance projects and operations.
+            </p>
+            <h2 class="title">When is it good to Buy Stocks or Bonds?</h2>
+            <p class="descriptionText">
+                If you want a constant/reliable flow of cash then Bonds are the better option, 
+                but if you want a somewhat high-risk high reward type of income then Stocks are the better thing 
+                to invest in. Even though it's best to get a mixture of both Stocks and Bonds.
+            </p>
+            
+            <div id = "bitStock">
+                <h2 class="title" id="ttl">Bitcoin Daily Price and Volume - Last Updated:</h2>
+                    <p class="irl2" style="float: left">Open: $</p><p class="irl" id="open"></p>
+                    <p class="irl2" style="float: left">Close: $</p><p class="irl" id="close"></p>
+                    <p class="irl2" style="float: left">High: $</p><p class="irl" id="high"></p>
+                    <p class="irl2" style="float: left">Low: $</p><p class="irl" id="low"></p>
+                    <p class="irl2" style="float: left">Volume: $</p><p class="irl" id="vol"></p>
+                    <p class="irl2" style="float: left">Market Cap: $</p><p class="irl" id="cap"></p>
+            </div>
     </body>
 </html>

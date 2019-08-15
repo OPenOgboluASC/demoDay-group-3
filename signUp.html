@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BitMine - Sign Up</title>
-    <script src = "signUp.js" defer></script>
-    <link href = "navagation.css" rel="stylesheet">
-    <link href = "style.css" rel="stylesheet">
+    <script src = "assets/lib/js/signUp.js" defer></script>
+    <link href = "assets/lib/css/navagation.css" rel="stylesheet">
+    <link href = "assets/lib/css/style.css" rel="stylesheet">
 </head>
 <body>
     <!--Nav Bar-->
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Bitcoin</a></li>
+            <li><img src = "assets/images/Capture.jpg"></li>
+            <li><a href="index.html">Home/Bitcoin</a></li>
             <li><a href="blockChain.html">Blockchain</a></li>
-            <li><a href="stocks.html">Stocks</a></li>
-            <li><a href="interest.html">Interest Rate</a></li>
+            <li><a href="stocks.html">Stocks/Bonds</a></li>
+            <li><a href="interest.html">Interest Rates & Loans</a></li>
             <li style="float:right">
-                <a href="login.html"><div class = "prof">
-                    <img src = "proPic.png">
+                <a href="login.html" class="active"><div class = "prof">
+                    <img src = "assets/images/proPic.png" id = "profPic">
                 </div></a>
             </li>
         </ul>
     </nav>
 
-    <form> 
+    <form id = "su"> 
         <div id = "signUpForm">
             <label for="name">Name</label>
             <div id = "name">
@@ -42,9 +43,31 @@
             <input type = "password" placeholder="Enter Password Again" id = "su_cPass" name="cPass" required>
 
             <button type="submit" id = "signUp">Sign Up</button>
-            <button id = "googleSI" onclick="redirect"><img src="googleG.png">Sign Up With Google</button>
-            <p id = "messageSU"></p>
+            <button id = "googleSU" onclick="redirect"><img src="assets/images/googleG.png">Sign Up With Google</button>
         </div>
     </form>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+        <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-database.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCWbggNXVm8jIoeSbCAbn9mUpf9hf0fXQQ",
+        authDomain: "bitmine-12643.firebaseapp.com",
+        databaseURL: "https://bitmine-12643.firebaseio.com",
+        projectId: "bitmine-12643",
+        storageBucket: "",
+        messagingSenderId: "109285251196",
+        appId: "1:109285251196:web:4815f17418a39553"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
 </body>
 </html>

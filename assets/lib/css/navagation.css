@@ -33,7 +33,7 @@ li a:hover, li img:hover {
     color: rgb(4, 4, 56);
 }
 
-img[src = "proPic.png"] {
+img[src = "assets/images/proPic.png"] {
     transform: scale(1.9,1.9);
     margin: 0;
     padding: 0;

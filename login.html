@@ -6,26 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src = "login.js" defer></script>
-    <link href="navagation.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <script src = "assets/lib/js/login.js" defer></script>
+    <link href="assets/lib/css/navagation.css" rel="stylesheet">
+    <link href="assets/lib/css/style.css" rel="stylesheet">
     <title>BitMine - Log In</title>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Bitcoin</a></li>
+            <li><img src = "assets/images/Capture.jpg"></li>
+            <li><a href="index.html">Home/Bitcoin</a></li>
             <li><a href="blockChain.html">Blockchain</a></li>
-            <li><a href="stocks.html">Stocks</a></li>
-            <li><a href="interest.html">Interest Rate</a></li>
+            <li><a href="stocks.html">Stocks/Bonds</a></li>
+            <li><a href="interest.html">Interest Rates & Loans</a></li>
             <li style="float:right">
                 <a href="login.html" class = "active">
-                    <img src = "proPic.png"></a>
+                    <img src = "assets/images/proPic.png" id = "profPic"></a>
             </li>
         </ul>
     </nav>
     
-    <form>
+    <form id = "si">
         <div id = "loginForm">
             <label for="email" class="lbl2">Email</label>
             <input type = "email" placeholder="Email@example.com" id = "si_email" name="email" required>
@@ -35,8 +36,7 @@
 
             <button type="submit" id = "signIn">Sign In</button>
         
-            <p id = "messageSI"></p>
-            <button id = "googleSI" onclick="redirect"><img src="googleG.png">Sign in With Google</button>
+            <button id = "googleSI" onclick="redirect"><img src="assets/images/googleG.png">Sign in With Google</button>
 
             <p>Don't have an account?</p>
             <p><a href="signUp.html">Create one here</a></p>

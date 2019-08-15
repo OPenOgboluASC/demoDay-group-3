@@ -1,7 +1,12 @@
 const signIn = document.getElementById("signIn");
 const googleSi = document.getElementById("googleSI");
+const form = document.getElementById("si");
+form.style.marginTop = '30px';
 let accounts = [];
 var provider = new firebase.auth.GoogleAuthProvider();
+let user;
+const prof = document.getElementById("profPic");
+let signedIn = false;
 
 function onClickSI(event) {
     event.preventDefault();
@@ -19,6 +24,9 @@ function onClickSI(event) {
                   });
                 console.log("Sign In Successful");
                 mess.innerHTML = "Sign In Successful";
+                user = firebase.auth().currentUser();
+                prof.src = user.photoURL;
+                location.assign("index.html");
                 return;
             }
         }
@@ -38,6 +46,9 @@ googleSi.addEventListener('click',function(event) {
         }
         // The signed-in user info.
         var user = result.user;
+        profPic.src = user.photoURL;
+        signedIn = true;
+        console.log(user);
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -48,6 +59,10 @@ googleSi.addEventListener('click',function(event) {
         var credential = error.credential;
         // ...
       });
+      if(signedIn){
+          signedIn = false;
+          location.assign("index.html");
+      }
 });
 
 class Account {
