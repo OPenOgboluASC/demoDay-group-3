@@ -1,12 +1,27 @@
 const signIn = document.getElementById("signIn");
 const googleSi = document.getElementById("googleSI");
+const logout = document.getElementById("logout");
 const form = document.getElementById("si");
 form.style.marginTop = '30px';
 let accounts = [];
 var provider = new firebase.auth.GoogleAuthProvider();
 let user;
-const prof = document.getElementById("profPic");
 let signedIn = false;
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      var user = firebase.auth().currentUser;
+
+      if(user != null) {
+        var photo = user.photoURL;
+        const prof = document.getElementById("profPic");
+        prof.src = photo;
+      }
+    } else {
+      // No user is signed in.
+    }
+  });
 
 function onClickSI(event) {
     event.preventDefault();
@@ -24,9 +39,9 @@ function onClickSI(event) {
                   });
                 console.log("Sign In Successful");
                 mess.innerHTML = "Sign In Successful";
-                user = firebase.auth().currentUser();
-                prof.src = user.photoURL;
-                location.assign("index.html");
+                // user = firebase.auth().currentUser();
+                // prof.src = user.photoURL;
+                // location.assign("index.html");
                 return;
             }
         }
@@ -35,6 +50,13 @@ function onClickSI(event) {
 }
 
 signIn.addEventListener('click', onClickSI);
+logout.addEventListener('click', function() {
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+      }).catch(function(error) {
+        // An error happened.
+      });
+})
 googleSi.addEventListener('click',function(event) {
     event.preventDefault();
     firebase.auth().signInWithRedirect(provider);
@@ -46,8 +68,14 @@ googleSi.addEventListener('click',function(event) {
         }
         // The signed-in user info.
         var user = result.user;
-        profPic.src = user.photoURL;
-        signedIn = true;
+        
+        // if(user != null) {
+        //     location.assign("C:/Users/ASCStudent/Documents/ASC/demoDay/index.html");
+        //     const prof = document.getElementById("profPic");
+        //     prof.src = user.photoURL;
+        //     prof.style.height = '10px';
+        //     prof.style.transform = 'scale(0.1,0.1)';
+        // }
         console.log(user);
       }).catch(function(error) {
         // Handle Errors here.

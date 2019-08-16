@@ -1,6 +1,5 @@
 const signUp = document.getElementById("signUp");
 const googleSu = document.getElementById("googleSU");
-const form = document.getElementById("su");
 const prof = document.getElementById("profPic");
 form.style.marginTop = '30px';
 let accounts = []; 
@@ -10,6 +9,7 @@ var database = firebase.database().ref("users");
 
 function onClickSU(event) {
     event.preventDefault();
+    const form = document.getElementById("su");
     let nameF = document.getElementById("first").value;
     let nameL = document.getElementById("last").value;
     let email = document.getElementById("su_email").value;
@@ -17,30 +17,18 @@ function onClickSU(event) {
     let cPass = document.getElementById("su_cPass").value;
     let mess = document.createElement("p");
     mess.id = "messageSU";
-    for(let acc of accounts){
-        if(acc.getUser() == user){
-            mess.innerHTML = "This email is already in use";
-            
-            return;
-        }
-    }
     if(pass == cPass){
       accounts.push(new Account(email, pass));
       firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
+            mess.innerHTML = errorMessage;
+            mess.insertBefore(mess, form);
             // ...
           });
+          var user = firebase.auth().currentUser();
         console.log("Sign Up Successful");
-        const user = {
-          name: {
-            first: nameF,
-            last: nameL
-          },
-          email: email
-        }
-        database.push(user);
     } else {
         mess.innerHTML = "Your Confirm Password does not match your Password";
     }
@@ -57,6 +45,10 @@ googleSu.addEventListener('click',function(event) {
         }
         // The signed-in user info.
         var user = result.user;
+
+        if(user != null) {
+
+        }
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;

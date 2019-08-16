@@ -67,7 +67,6 @@ p{
   width: 600px;
   border: 15px solid whitesmoke ;
   padding: 50px;
-  margin: 20px;
 }
 
 .title{
@@ -79,6 +78,8 @@ p{
 .title2{
   color: #ffde7d;
   font-size: 190px;
+  padding-left: 20px;
+  
 }
 
 #wholeWebsite{
@@ -90,8 +91,8 @@ p{
   z-index: -1;
 }
 #bkcimage{
-  padding-top: 20px;
-  padding-left: 760px;
+
+  float: right;
   width:500px;
   height: 500px;
 }
@@ -211,13 +212,13 @@ input[type=email], input[type=password], input[type=text] {
 }
 
 .irl{
-  font-size: 35px;
+  font-size: 40px;
   color: gold;
   padding-right: 20px;
 }
 
 .irl2{
-  font-size: 35px;
+  font-size: 40px;
   color: gold;
   padding-left: 20px;
 }
@@ -261,4 +262,25 @@ img[src="assets/images/googleG.png"] {
   text-align: center;
 }  
 
-  
+  .something{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 50px;
+
+  }
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item p {
+    border-radius: 10px;
+  }
+
+
+  .title3{
+    color: #ffde7d;
+    font-size: 100px;
+  }
